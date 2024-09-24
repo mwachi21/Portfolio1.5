@@ -1,1 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# Flask
+instance/
+.webassets-cache
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# IDEs and editors
+.idea/
+.vscode/
 
