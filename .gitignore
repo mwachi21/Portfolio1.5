@@ -24,3 +24,10 @@ build/
 .idea/
 .vscode/
 
+# Tailwind
+.log/
+node_modules/
+docs/
+css/
+export.scss
+export/

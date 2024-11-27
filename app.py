@@ -1,19 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p> Starter Pack</p>"
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-#Error 404
-
-@app.errorhandler(404)
-def not_found(error):
-    resp = make_response(render_template('error.html'), 404)
-    resp.headers['X-Something'] = 'A value'
-    return resp
-
-#Never deploy this
+#Never deploy this in production
 if __name__ == '__main__':
     app.run(debug=True)
