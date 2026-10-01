@@ -1,10 +1,22 @@
-from flask import Flask, render_template
+import flask
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return flask.render_template('index.html')
+
+@app.route('/about')
+def about():
+    return flask.render_template('about.html')
+
+@app.route('/projects')
+def projects():
+    return flask.render_template('projects.html')
+
+@app.route('/contact')
+def contact():
+    return flask.render_template('contact.html')
 
 #Never deploy this in production
 if __name__ == '__main__':
